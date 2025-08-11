@@ -1,24 +1,20 @@
 public class DuplicateCharacters {
     public static void main(String[] args) {
-        String str = "programming";
-        str = str.toLowerCase(); 
-        char[] chars = str.toCharArray();
-
-        System.out.println("Duplicate characters:");
-
-        for (int i = 0; i < chars.length; i++) {
-            int count = 1;
-            if (chars[i] == '0') continue; 
-
-            for (int j = i + 1; j < chars.length; j++) {
-                if (chars[i] == chars[j]) {
-                    count++;
-                    chars[j] = '0'; // mark as counted
+        String s="Programming";
+        System.out.println("Unique characters in the string: " + s);
+        for(int i=0;i<s.length();i++){
+            for(int j=i+1;j<s.length();j++){
+                if(s.charAt(i)== s.charAt(j)){
+                    System.out.println("unique characters:" + s.charAt(i));
+                    break; // Exit the inner loop once a duplicate is found
                 }
             }
-            if (count > 1) {
-                System.out.println(chars[i] + " - " + count + " times");
-            }
         }
-    }
-}
+        
+
+        }
+
+        }
+        
+    
+
